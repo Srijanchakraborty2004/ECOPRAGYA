@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intense Cyclone</title>
+    <link rel="stylesheet" href="General.css">
+    <script src="common.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="background-color: rgb(247, 239, 239);">
+    <div class="nav" style="background-color: black;">
+        <div class="mini-cont"><div class="mini-logo"> <a href="index.html"> kkk</a> </div></div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Causes.html">Causes</a></li>
+            <li class="active"><a href="effect.html">Effect</a></li>
+            <li><a href="action.html">Action</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Log In</a></li>
+        </ul>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" id="bar" viewBox="0 -960 960 960" width="24px"
+            fill="#e8eaed" onclick=showSidebar()>
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg>
+    </div>
+    <div style="margin-top: 100px;">
+        <h1>Climate Change Makes Cyclones More Intense and Destructive, Scientists Say</h1>
+        <p>
+
+            Climate change does not make cyclones, such as the one battering Bangladesh, more frequent, but it does
+            render them more intense and destructive, according to climatologists and weather experts.
+
+            These immensely powerful natural phenomena have different labels according to the region they hit, but
+            cyclones, hurricanes and typhoons are all violent tropical storms that can generate 10 times as much energy
+            as the Hiroshima atomic bomb.
+
+            They are divided into different categories according to their maximum sustained wind strength and the scale
+            of damage they can potentially inflict.</p>
+    </div>
+    <div class="mychart">
+        <canvas id="deforest"></canvas>
+    </div>
+    <div class="para">
+        <h1>Causes of Cyclone</h1>
+        <p>
+        <ul> Cyclone are caused by atmospheric disturbances arond a low pressure are distinguished by swift and often
+            destructive air circulation.
+            <li> Warm temperature at sea surfaces.</li>
+            <li> Coriolis force impacts the area that forms a low-pressure zone..</li>
+            <li>Atmospheric instability..</li>
+            <li> Increased humidity in the lower to middle levels of the troposphere.</li>
+            <li> Low vertical wind shear.Pre-existing low-level disturbance or focus.</li>
+        </ul>
+        </p>
+    </div>
+    <div class="mychart">
+        <canvas id="eforest"></canvas>
+    </div>
+    <div class="para">
+        <h1>Types Of Cyclone</h1>
+        <p>
+        <ul>
+            <li> <b>Tropical cyclones: </b> These are warm-core cyclones that form over tropical and subtropical oceans.
+                In the Atlantic and northeastern Pacific, they are called hurricanes, while in the Indian and
+                southwestern Pacific, they are referred to as cyclones</li>
+            <li> <b>Extratropical cyclones</b> These large-scale low-pressure systems form in mid-latitude regions. They
+                are associated with weather fronts and can bring significant precipitation and wind.</li>
+            <li> <b>Polar cyclones</b>These cyclones occur near the poles and are characterized by cold air masses. They
+                are less common than tropical and extratropical cyclones.</li>
+            <li><b>Mesocyclone</b>The mesocyclone is considered to be one of the strong thunderstorms. The mesocyclone
+                is found within the convective storm in the form of a vortex of air. The air rises and rotates along the
+                vertical axis. The direction of this air and the low-pressure system are the same in the given
+                hemisphere. The mesocyclone is accompanied by the rotating air within the thunderstorm.</li>
+        </ul>
+
+        </p>
+    </div>
+    <div class="mychart">
+        <canvas id="piforest"></canvas>
+    </div>
+    <div class="para">
+        <h1>Conclusion</h1>
+        <p>In conclusion, cyclones are complex natural phenomena that demand our attention and preparedness. From
+            destructive forces to lessons learned from historical events, understanding cyclones is key to mitigating
+            their impacts. Preparedness at both the individual and community levels is paramount, and global cooperation
+            is essential to address the challenges posed by these powerful weather events.
+        </p>
+    </div>
+    <!-- <button class="go">
+        <a href="biodiversity.html"> Next</a>
+    </button>
+    <button class="bk">
+        <a href="wildfire.html"> Prev</a>
+    </button> -->
+    <button class="bk">
+        <a href="effect.html"> Prev</a>
+    </button>
+    <footer>
+        <div class="footer-container">
+            <div class="icons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                <a href=""><i class="fa-brands fa-x"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="Team.html">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>Copyright &copy; 2024; Designed by <span class="designer"> team pragati</span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const df = document.getElementById('deforest');
+        const edf = document.getElementById('eforest');
+        const pf = document.getElementById('piforest').getContext('2d');
+
+        new Chart(df, {
+            type: 'line',
+            data: {
+                labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'],
+                datasets: [{
+                    label: 'number of cyclones',
+                    data: [64, 71, 58, 62, 75, 68, 79, 71, 65, 73],
+                    borderWidth: 3,
+                    backgroundColor: 'blue',
+                    borderColor: 'blue',
+                    pointBackgroundColor: 'aqua'
+                }
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Frequency of Cyclone for each year',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        new Chart(edf, {
+            type: 'bar',
+            data: {
+                labels: ['North Atlantic', 'Northeast Pacific', 'Northweast Pacific', 'South Pacific', 'Indian Ocean', 'Southern Ocean'],
+                datasets: [{
+                    label: 'Number of cyclones',
+                    data: [34, 27, 41, 23, 31, 17],
+                    borderWidth: 1,
+                    backgroundColor: 'aqua'
+                }
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Frequency of Cyclone in different regions',
+                    }
+                },
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        new Chart(pf, {
+            type: 'bar',
+            data: {
+                labels: ['May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                    label: 'number of cyclones',
+                    data: [2, 5, 12, 20, 25, 15, 8, 3],
+                    borderWidth: 3,
+                    backgroundColor: 'blue',
+                    borderColor: 'blue',
+                    pointBackgroundColor: 'azure'
+                }
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Frequency of Cyclone for each month in north atlantic',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
